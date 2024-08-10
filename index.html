@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #highestScore {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="highestScore">En Yüksek Puan: 0</div>
+
+    <h1>Quiz</h1>
+
+    <form id="quizForm">
+
+        <h4>Soru 1 : İsminizi Giriniz</h4>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <h4>Soru 2: Python'da range(1, 5) ifadesinin çıktısı nedir?</h4>
+        <input type="radio" id="option1" name="question1" value="wrong">
+        <label for="option1">[1, 2, 3, 4, 5]</label><br>
+        <input type="radio" id="option2" name="question1" value="wrong">
+        <label for="option2">[0, 1, 2, 3, 4]</label><br>
+        <input type="radio" id="option3" name="question1" value="correct">
+        <label for="option3">[1, 2, 3, 4]</label><br><br>
+
+        <h4>Soru 3: Python'da for döngüsünün kullanım amacı nedir?</h4>
+        <input type="radio" id="option4" name="question2" value="wrong">
+        <label for="option4">Verilen bir koşul sağlandığı sürece döngüyü tekrarlamak</label><br>
+        <input type="radio" id="option5" name="question2" value="correct">
+        <label for="option5">Bir dizideki her bir eleman üzerinde işlem yapmak</label><br>
+        <input type="radio" id="option6" name="question2" value="wrong">
+        <label for="option6">Bir fonksiyonu çağırmak</label><br><br>
+
+        <h4>Soru 4: Python'da bir listenin içindeki en büyük ve en küçük elemanları bulan bir fonksiyon yazmanız
+            isteniyor. Bu fonksiyonu nasıl tasarlarsınız ve kodunuzu açıklayarak yazınız?</h4>
+        <textarea id="question3" name="question3" rows="4" cols="50"></textarea><br><br>
+
+        <button type="button" onclick="calculateScore()">Gönder</button>
+    </form>
+
+    <div id="result"></div>
+
+    <footer>Geliştirici: Gülender Ezgi Kuyucu</footer>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
